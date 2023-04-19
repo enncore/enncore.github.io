@@ -8,10 +8,25 @@
     <meta name="description" content="Security for all in an AI enabled society">
     <meta name="author" content="EnnCore Team">
     <title>Security for all in an AI enabled society</title>
+    
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+
+    <style>
+        .custom-popover {
+            max-width: 340px;
+        }
+        .custom-popover .popover-header {
+            background-color:rgb(222, 240, 255);
+        }
+    </style>
 </head>
 
 <body id="secaiws">
@@ -71,7 +86,17 @@
                     </tr>
                     <tr>
                         <td>15:15 - 15:45</td>
-                        <td>AISEC project talk by TBC</td>
+                        <td>
+                            One Picture Paints a Thousand Words: Using Abstract Interpretation for NLP Verification
+                                <a tabindex="0" class="btn btn-secondary" style="float: right;"
+                                data-bs-toggle="popover" data-bs-trigger="focus"
+                                data-bs-custom-class="custom-popover"
+                                data-bs-title="One Picture Paints a Thousand Words: Using Abstract Interpretation for NLP Verification - Marco Casadio"
+                                data-bs-content="Verification of machine learning models used in Natural Language Processing (NLP) is known to be a hard problem. In particular, many known neural network verification methods that work for computer vision and other numeric datasets do not work for NLP. In this paper, we study technical reasons that underlie this problem. Based on this analysis, we propose practical methods and heuristics for preparing NLP datasets and models in a way that renders them amenable to known verification methods based on abstract interpretation. We implement these methods as a Python library that links to the neural network verifier ERAN. We perform evaluation of the tool using an NLP dataset R-U-A-Robot suggested as a benchmark for verifying legally critical NLP applications. We hope that, thanks to its general applicability, this work will open novel possibilities for including NLP verification problems into neural network verification competitions, and will popularise NLP problems within this community.">
+                                details
+                            </a>
+                              
+                        </td>
                     </tr>                    
                     <tr>
                         <td>15:45 - 16:00</td>
@@ -137,10 +162,10 @@
     </div>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
 </body>
 
 </html>
