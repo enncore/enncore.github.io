@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generative AI Under the Lens</title>
+  <meta name="description" content="Generative AI Under the Lens: Rigorous Checks for Safety and Reliability. Workshops in Manchester (Dec 10) and Liverpool (Dec 11), 2025." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020; --muted:#141b34; --card:#0f1530; --txt:#e7ebff; --sub:#9aa3c7; --acc:#6aa7ff; --acc2:#a78bfa;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),#0a0f1d 60%, #0a0c18);color:var(--txt);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:var(--acc);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+    nav a{margin:0 10px;color:var(--sub)}
+    nav a:hover{color:#fff}
+    .btn{display:inline-block;padding:12px 18px;border-radius:14px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#081022;font-weight:700;box-shadow:0 8px 24px rgba(106,167,255,.3)}
+    .btn:hover{filter:brightness(1.05)}
+    .hero{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;padding:42px 0}
+    .hero .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:26px}
+    h1{font-size:40px;line-height:1.1;margin:0 0 14px}
+    p.lead{color:var(--sub);font-size:18px;margin:0 0 22px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .tile{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px}
+    .tile h3{margin:0 0 6px;font-size:18px}
+    .tile p{margin:0;color:var(--sub);font-size:14px}
+    section{padding:28px 0}
+    .section-title{font-size:22px;margin:0 0 12px}
+    footer{padding:24px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--sub);font-size:14px}
+    .badge{display:inline-block;padding:6px 10px;border:1px solid rgba(255,255,255,.15);border-radius:999px;color:var(--sub);font-size:12px}
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+    }
+    @media (max-width:600px){
+      h1{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Workshop Series 2025</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#eventos">Register</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>Generative AI Under the Lens</h1>
+        <p class="lead">Rigorous Checks for Safety and Reliability<br>Manchester: <strong>10 December 2025</strong> · Liverpool: <strong>11 December 2025</strong></p>
+        <a class="btn" href="#eventos">Register Now</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About this Event</h2>
+      <p class="lead">Welcome to our in-person event where we delve into the world of Generative AI and explore the importance of rigorous checks for safety and reliability. Join us for a day filled with insightful discussions, hands-on workshops, and networking opportunities with experts in the field. Whether you're a seasoned professional or just starting out, this event is perfect for anyone interested in the intersection of AI and ethics. Don't miss out on this unique opportunity to learn, connect, and grow in a supportive and engaging environment.</p>
+    </section>
+
+    <section id="agenda">
+      <h2 class="section-title">Agenda</h2>
+      <div class="grid">
+        <div class="tile">
+          <h3>Day 1 – Manchester (Dec 10)</h3>
+          <ul>
+            <li>09:00 – Opening & Welcome</li>
+            <li>09:30 – Keynote: AI-assisted formal verification</li>
+            <li>10:30 – Session I: SE4GenAI & GenAI4SE Foundations</li>
+            <li>12:00 – Lunch & Networking</li>
+            <li>13:30 – Session II: Technical Demonstrations & Case Studies</li>
+            <li>15:00 – Panel Discussion</li>
+            <li>16:00 – Closing</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h3>Day 2 – Liverpool (Dec 11)</h3>
+          <ul>
+            <li>09:00 – Opening & Framing</li>
+            <li>09:30 – Keynote: Generative AI & multidisciplinary applications</li>
+            <li>10:30 – Session III: Cross-Disciplinary Perspectives</li>
+            <li>12:00 – Lunch & Networking</li>
+            <li>13:30 – Session IV: Roadmap & Collaboration Priorities</li>
+            <li>15:00 – Closing & Next Steps</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="eventos">
+      <h2 class="section-title">Register</h2>
+      <p class="lead">Secure your place for one or both days via Eventbrite:</p>
+      <p>
+        <a class="btn" href="https://www.eventbrite.com/cc/ai-safety-and-reliability-4683233" target="_blank" rel="noopener">Register on Eventbrite</a>
+      </p>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Generative AI Under the Lens · Hosted by The University of Manchester</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
