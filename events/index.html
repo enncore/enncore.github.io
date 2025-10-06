@@ -34,11 +34,40 @@
     .section-title{font-size:22px;margin:0 0 12px}
     footer{padding:24px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--sub);font-size:14px}
     .badge{display:inline-block;padding:6px 10px;border:1px solid rgba(255,255,255,.15);border-radius:999px;color:var(--sub);font-size:12px}
+
+    /* --- Gallery --- */
+    .gallery { padding: 28px 0; }
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .gallery figure{
+      margin:0;
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:18px;
+      overflow:hidden;
+    }
+    .gallery img{
+      width:100%;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      display:block;
+    }
+    .gallery figcaption{
+      padding:12px 14px;
+      font-size:14px;
+      color:var(--sub);
+      border-top:1px solid rgba(255,255,255,.06);
+    }
     @media (max-width:900px){
       .grid{grid-template-columns:1fr}
+      .gallery-grid{ grid-template-columns:repeat(2,1fr); }
     }
     @media (max-width:600px){
       h1{font-size:32px}
+      .gallery-grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -61,20 +90,15 @@
     </section>
 
     <section id="about">
-  <h2 class="section-title">Workshop Overview</h2>
-
-  <p>Generative AI is advancing at an unprecedented pace, enabling breakthroughs in software engineering, robotics, autonomous systems, healthcare, education, and beyond. These rapid developments create extraordinary opportunities for innovation but also raise urgent challenges around safety, reliability, ethics, and societal impact. Addressing these challenges requires both technical rigor and interdisciplinary insight.</p>
-    
-  <p>This two-day workshop brings together researchers, practitioners, and experts from computer science and across diverse domains to explore how generative AI can be developed, verified, and deployed responsibly.</p>
-
-  <ul>
-    <li>Day 1 will focus on the computer science and AI foundations of generative AI, with an emphasis on verification methods - both formal and statistical - that can ensure the safety, security, and reliability of AI-driven systems.</li>
-    <li>Day 2 will broaden the conversation by incorporating interdisciplinary perspectives from fields such as healthcare, law, education, and the social sciences. These discussions will highlight how insights from other disciplines can directly inform computer science research, contributing to the design of generative AI that is more robust, ethical, and aligned with societal needs.</li>
-  </ul>
-    
-  <p>Together, the two days will provide a comprehensive view of the challenges and opportunities in generative AI, bridging technical innovation with cross-domain collaboration to advance both scientific rigor and responsible practice.</p>
-
-</section>
+      <h2 class="section-title">Workshop Overview</h2>
+      <p>Generative AI is advancing at an unprecedented pace, enabling breakthroughs in software engineering, robotics, autonomous systems, healthcare, education, and beyond. These rapid developments create extraordinary opportunities for innovation but also raise urgent challenges around safety, reliability, ethics, and societal impact. Addressing these challenges requires both technical rigor and interdisciplinary insight.</p>
+      <p>This two-day workshop brings together researchers, practitioners, and experts from computer science and across diverse domains to explore how generative AI can be developed, verified, and deployed responsibly.</p>
+      <ul>
+        <li>Day 1 will focus on the computer science and AI foundations of generative AI, with an emphasis on verification methods - both formal and statistical - that can ensure the safety, security, and reliability of AI-driven systems.</li>
+        <li>Day 2 will broaden the conversation by incorporating interdisciplinary perspectives from fields such as healthcare, law, education, and the social sciences. These discussions will highlight how insights from other disciplines can directly inform computer science research, contributing to the design of generative AI that is more robust, ethical, and aligned with societal needs.</li>
+      </ul>
+      <p>Together, the two days will provide a comprehensive view of the challenges and opportunities in generative AI, bridging technical innovation with cross-domain collaboration to advance both scientific rigor and responsible practice.</p>
+    </section>
 
     <section id="agenda">
       <h2 class="section-title">Agenda</h2>
@@ -85,18 +109,14 @@
           <p>Generative AI has accelerated development across various domains - including software, robotics, autonomous systems, and industrial applications - enabling rapid innovation and productivity gains. However, deploying generative AI-driven systems can introduce safety, security, and reliability vulnerabilities, highlighting the urgent need for rigorous evaluation of their outputs before deployment. Among many evaluation techniques, this workshop will focus on formal and statistical verification approaches.</p>
           <p>Generative AI requires careful verification. For example, in software development, 45% of organizations prioritize speed over quality, and 63% deploy code without full testing. While 80% view generative AI as enhancing both speed and quality, studies reveal significant flaws that could compromise safety and security, underscoring the need for efficient yet thorough verification methods across all AI-driven systems.</p>
           <p>Generative AI can also support verification in multiple ways, including:</p>
-          
           <ul>
             <li>Automating specification generation from system requirements to accelerate verification workflows.</li>
             <li>Enhancing formal verification tools by guiding proofs, generating counterexamples, and analyzing high-risk areas.</li>
             <li>Optimizing verification productivity and coverage in complex systems, including hardware and software co-design.</li>
             <li>Integrating with statistical methods to improve reliability, uncertainty quantification, and diagnostics.</li>
           </ul>
-          
           <p>These AI-assisted techniques reduce human effort, scale verification to complex systems, and enable tasks previously infeasible, while maintaining rigorous guarantees.</p>
-          
           <p>Participants will explore cutting-edge verification techniques and collaborative opportunities to advance trustworthy and reliable generative AI deployment.</p>
-
         </div>
         <div>
           <h3>Day 2 – Liverpool (Dec 11)</h3>
@@ -104,7 +124,6 @@
           <p>Generative AI is reshaping fields far beyond computer science—transforming healthcare, education, law, media, and the arts. Each of these domains brings unique challenges and insights around ethics, accountability, fairness, and human impact. The second day of the workshop will focus on how interdisciplinary perspectives can directly inform and strengthen computer science research, ensuring that generative AI systems are not only powerful but also responsible, reliable, and aligned with societal needs.</p>
           <p>Technical innovations alone cannot resolve issues such as bias, misuse, or ethical ambiguity. By engaging with healthcare, we learn how to embed safety and reliability standards into system design. From law and policy, we gain frameworks for accountability and verifiable compliance. Social sciences highlight risks around bias, equity, and trust that can guide model evaluation. The arts and humanities challenge us to rethink creativity, authorship, and the boundaries of human–AI collaboration. These perspectives are not external to CS—they are essential inputs that shape more rigorous and ethical AI development.</p>
           <p>Interdisciplinary insights can support CS research in several concrete ways:</p>
-          
           <ul>
             <li>Embedding Ethical Constraints: Translating values like fairness and accountability into measurable, testable system properties.</li>
             <li>Guiding Verification Benchmarks: Using policy and domain-specific requirements to set new standards for evaluation and robustness.</li>
@@ -114,6 +133,42 @@
           </ul>
           <p>By reframing interdisciplinary dialogue as an essential input to technical progress, this workshop will highlight how cross-domain expertise can directly strengthen computer science research, ensuring that future systems are both technically sound and socially aligned.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- === Gallery Section === -->
+    <section id="gallery" class="gallery">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-grid">
+        <figure>
+          <img src="images/fig1.jpg" alt="Keynote session in Manchester">
+          <figcaption>Keynote – Manchester</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fig2.jpg" alt="Panel on formal verification">
+          <figcaption>Panel: Formal Verification</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fig3.jpg" alt="Live demo of tooling">
+          <figcaption>Live Tooling Demo</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fig4.jpg" alt="Breakout discussions">
+          <figcaption>Breakout Discussions</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fig5.jpg" alt="Poster session with researchers">
+          <figcaption>Poster Session</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fig6.jpg" alt="Interdisciplinary roundtable">
+          <figcaption>Interdisciplinary Roundtable</figcaption>
+        </figure>
+        <figure>
+          <img src="images/fig7.jpg" alt="Networking and closing remarks">
+          <figcaption>Networking & Closing</figcaption>
+        </figure>
+        <!-- Two empty slots left unused to complete 3×3 grid -->
       </div>
     </section>
 
