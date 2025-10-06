@@ -42,12 +42,16 @@
       grid-template-columns:repeat(3,1fr);
       gap:18px;
     }
-    .gallery figure{
-      margin:0;
-      background:var(--card);
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:18px;
-      overflow:hidden;
+    .gallery figure {
+      margin: 0;
+      background: #ffffff; /* white background for each tile */
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px; /* optional small inner padding */
     }
     .gallery img {
       width: 100%;
